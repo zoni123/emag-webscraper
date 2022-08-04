@@ -15,5 +15,5 @@ for result in info:
     print(name.text)
     print(av.text)
     print(price.text)
-    print("ARTICOL: " + article)
+    print("ARTICLE: " + article)
     print("\n")
