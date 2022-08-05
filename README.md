@@ -1,5 +1,5 @@
 # emag-webscraper
-A python script which displays product data from eMAG.
+A python script which displays the name, price and availability of a product from eMAG.
 (***Note:*** You must have [**pip**](https://pypi.org/project/pip/) installed)
 # Requirements
 - python3
