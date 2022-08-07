@@ -10,4 +10,4 @@ A python script which displays the name, price and availability of products from
 
 # Usage
 
-Upon running the .py script, you'll be greeted by a ***Search*** message. Write the name of your desired product and this script will retrieve the most relevant results.
+Upon running the .py script, you'll be greeted by a ***Search*** message. Write the name of your desired product and this script will retrieve up to 60 results.
