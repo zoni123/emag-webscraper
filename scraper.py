@@ -21,9 +21,9 @@ if __name__ == '__main__':
         print(price.text)
         if(review!=None):
             if(review_n.text=="(1)"):
-                print("Review: " + review.text + "/5 -> (1) review")
+                print("Rating: " + review.text + "/5 -> (1) review")
             else:
-                print("Review: " + review.text + "/5 -> " + review_n.text + " reviews")
+                print("Rating: " + review.text + "/5 -> " + review_n.text + " reviews")
         else:
             print("No reviews yet")
         print("ARTICLE: " + article)
