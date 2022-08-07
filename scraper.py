@@ -1,6 +1,7 @@
 if __name__ == '__main__':
     import requests
     from bs4 import BeautifulSoup
+    i=1
     x = input("Search: ")
     URL = "https://www.emag.ro/search/" + x
     page = requests.get(URL)
@@ -12,9 +13,19 @@ if __name__ == '__main__':
         name = result.find("a", class_="card-v2-title semibold mrg-btm-xxs js-product-url")
         av = result.find("div", class_="card-estimate-placeholder")
         price = result.find("p", class_="product-new-price")
+        review = result.find("span", class_="average-rating semibold")
+        review_n = result.find("span", class_="visible-xs-inline-block")
         article = result.find("a")["href"]
-        print(name.text)
+        print(str(i) + ". " + name.text)
         print(av.text)
         print(price.text)
+        if(review!=None):
+            if(review_n.text=="(1)"):
+                print("Review: " + review.text + "/5 -> (1) review")
+            else:
+                print("Review: " + review.text + "/5 -> " + review_n.text + " reviews")
+        else:
+            print("No reviews yet")
         print("ARTICLE: " + article)
         print("\n")
+        i+=1
