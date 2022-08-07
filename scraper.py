@@ -16,5 +16,5 @@ if __name__ == '__main__':
         print(name.text)
         print(av.text)
         print(price.text)
-        print("ARTICOL: " + article)
+        print("ARTICLE: " + article)
         print("\n")
