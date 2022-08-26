@@ -1,7 +1,8 @@
+import requests
+from bs4 import BeautifulSoup
+
 if __name__ == '__main__':
-    import requests
-    from bs4 import BeautifulSoup
-    i=1
+    i = 1
     x = input("Search: ")
     URL = "https://www.emag.ro/search/" + x
     page = requests.get(URL)
@@ -19,8 +20,8 @@ if __name__ == '__main__':
         print(str(i) + ". " + name.text)
         print(av.text)
         print(price.text)
-        if(review!=None):
-            if(review_n.text=="(1)"):
+        if(review != None):
+            if(review_n.text == "(1)"):
                 print("Rating: " + review.text + "/5 -> (1) review")
             else:
                 print("Rating: " + review.text + "/5 -> " + review_n.text + " reviews")
@@ -28,4 +29,4 @@ if __name__ == '__main__':
             print("No reviews yet")
         print("ARTICLE: " + article)
         print("\n")
-        i+=1
+        i += 1
