@@ -12,6 +12,7 @@ if __name__ == '__main__':
     output_page.column_dimensions['D'].width = 15
     output_page.column_dimensions['E'].width = 10
     output_page.column_dimensions['F'].width = 20
+    output_page.column_dimensions['G'].width = 100
     i = 1
     x = input("Search: ")
     URL = "https://www.emag.ro/search/" + x
@@ -48,6 +49,7 @@ if __name__ == '__main__':
             print("No reviews yet")
             output_page['E' + str(i)] = '-'
         print("ARTICLE: " + article)
+        output_page['G' + str(i)] = article
         print("\n")
         i += 1
     output.save("output.xlsx")
